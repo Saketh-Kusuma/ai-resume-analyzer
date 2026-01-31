@@ -4,6 +4,8 @@ import ResumeCard from "~/components/ResumeCard";
 import { Link, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import { usePuterStore } from "~/libs/puter";
+import { Helmet } from "react-helmet";
+import SEO from "~/components/SEO";
 
 
 export function meta({ }: Route.MetaArgs) {
@@ -33,6 +35,17 @@ export default function Home() {
     loadResumes();
   }, []);
   return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+    <Helmet>
+      <title>ResuAIze</title>
+      <meta name="description" content="AI-powered resume analyzer that instantly evaluates your CV, highlights strengths, detects gaps, and provides smart improvement suggestions for better job matching." />
+    </Helmet>
+    <SEO
+      title="ResuAIze | Free ATS Resume Score & Resume Feedback Tool"
+      description="ResuAIze is the best AI Resume Analyzer to check ATS score, optimize resume keywords, and get instant job-winning feedback."
+      keywords="AI Resume Analyzer, ATS Resume Checker, Resume Score Tool, Resume Feedback AI, Resume Keyword Optimization"
+      url="https://resuaize.vercel.app/"
+    />
+
     <Navbar />
     <section className="main-section">
       <div className="page-heading py-16">

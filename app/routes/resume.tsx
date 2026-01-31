@@ -4,6 +4,7 @@ import { usePuterStore } from "~/libs/puter";
 import Summary from "~/components/Summary";
 import ATS from "~/components/ATS";
 import Details from "~/components/Details";
+import SEO from "~/components/SEO";
 
 export const meta = () => {
   return [
@@ -81,6 +82,19 @@ const Resume = () => {
   }, [id]);
   return (
     <main className={"pt-0!"}>
+      <SEO
+        title="Resume Feedback Report | AI Resume Summary & ATS Suggestions"
+        description="View your AI-generated resume summary, ATS score insights, keyword improvements, and personalized job-winning feedback instantly."
+        keywords="
+          AI Resume Feedback,
+          Resume Summary Generator,
+          ATS Resume Report,
+          Resume Improvement Suggestions,
+          Resume Optimization Tool,
+          AI Resume Review
+        "
+        url="https://resuaize.vercel.app/resume"
+      />
       <nav className="resume-nav">
         <Link to={"/"} className={"back-button"}>
           <img src={"/icons/back.svg"} alt={"back"} className={"w-2.5 h-2.5"} />

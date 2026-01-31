@@ -5,6 +5,7 @@ import { usePuterStore } from "~/libs/puter";
 import { useNavigate } from "react-router";
 import { generateUUID } from "~/utils";
 import { prepareInstructions } from "~/constants";
+import SEO from "~/components/SEO";
 const convertPdfToImage = async (file: File) => {
   const { convertPdfToImage: converter } = await import("~/libs/pdfToImage");
   return converter(file);
@@ -170,6 +171,13 @@ const Upload = () => {
   };
   return (
     <main className={"bg-[url('/images/bg-main.svg')] bg-cover"}>
+      <SEO
+        title="Upload Resume |  ResuAIze"
+        description="Upload your resume and get instant ATS score, keyword suggestions, and improvements using AI."
+        keywords="ResuAIze, Upload Resume, ATS Resume Score, Resume AI Review"
+        url="https://resuaize.vercel.app/upload"
+      />
+
       <Navbar />
       <section className={"main-section"}>
         <div className="page-heading py-5">
